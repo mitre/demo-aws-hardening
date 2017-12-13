@@ -1,0 +1,226 @@
+I, [2017-12-11T23:32:09.380472 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Cleaning up any prior instances of <aws-inspec-demo-ubuntu>
+I, [2017-12-11T23:32:09.381713 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Destroying <aws-inspec-demo-ubuntu>...
+W, [2017-12-11T23:32:09.382258 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform init -input=false -lock=true -lock-timeout=0s  -force-copy -backend=true  -get=true -get-plugins=true  -verify-plugins=true /Users/yarick/Downloads/tf_aws_cluster`
+I, [2017-12-11T23:32:09.423000 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:32:09.423255 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1mInitializing provider plugins...[0m
+I, [2017-12-11T23:32:09.643208 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:32:09.643360 #20518]  INFO -- aws-inspec-demo-ubuntu: The following providers do not have any version constraints in configuration,
+I, [2017-12-11T23:32:09.643410 #20518]  INFO -- aws-inspec-demo-ubuntu: so the latest version was installed.
+I, [2017-12-11T23:32:09.643504 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:32:09.643630 #20518]  INFO -- aws-inspec-demo-ubuntu: To prevent automatic upgrades to new major versions that may contain breaking
+I, [2017-12-11T23:32:09.643692 #20518]  INFO -- aws-inspec-demo-ubuntu: changes, it is recommended to add version = "..." constraints to the
+I, [2017-12-11T23:32:09.643723 #20518]  INFO -- aws-inspec-demo-ubuntu: corresponding provider blocks in configuration, with the constraint strings
+I, [2017-12-11T23:32:09.643745 #20518]  INFO -- aws-inspec-demo-ubuntu: suggested below.
+I, [2017-12-11T23:32:09.643764 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:32:09.643884 #20518]  INFO -- aws-inspec-demo-ubuntu: * provider.aws: version = "~> 1.5"
+I, [2017-12-11T23:32:09.643905 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:32:09.643926 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+W, [2017-12-11T23:32:09.657664 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace select kitchen-terraform-aws-inspec-demo-ubuntu`
+W, [2017-12-11T23:32:09.716418 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform destroy -force -lock=true -lock-timeout=0s -input=false  -parallelism=10 -refresh=true  -var-file=/Users/yarick/Downloads/tf_aws_cluster/testing.tfvars /Users/yarick/Downloads/tf_aws_cluster`
+I, [2017-12-11T23:32:11.350193 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Refreshing state... (ID: aws_demo_bucket_1)[0m
+I, [2017-12-11T23:32:11.350331 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Refreshing state... (ID: i-06f6a095ee62ec0e8)[0m
+I, [2017-12-11T23:32:12.752334 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Destroying... (ID: i-06f6a095ee62ec0e8)[0m[0m
+I, [2017-12-11T23:32:12.752538 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Destroying... (ID: aws_demo_bucket_1)[0m[0m
+I, [2017-12-11T23:32:13.189774 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Destruction complete after 0s[0m[0m
+I, [2017-12-11T23:32:22.753149 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-06f6a095ee62ec0e8, 10s elapsed)[0m[0m
+I, [2017-12-11T23:32:32.753526 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-06f6a095ee62ec0e8, 20s elapsed)[0m[0m
+I, [2017-12-11T23:32:42.753593 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-06f6a095ee62ec0e8, 30s elapsed)[0m[0m
+I, [2017-12-11T23:32:52.754633 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-06f6a095ee62ec0e8, 40s elapsed)[0m[0m
+I, [2017-12-11T23:33:02.640796 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Destruction complete after 50s[0m[0m
+I, [2017-12-11T23:33:02.649328 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32m
+I, [2017-12-11T23:33:02.649495 #20518]  INFO -- aws-inspec-demo-ubuntu: Destroy complete! Resources: 2 destroyed.[0m
+W, [2017-12-11T23:33:02.669484 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace select default`
+I, [2017-12-11T23:33:02.713274 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[32mSwitched to workspace "default".[0m
+W, [2017-12-11T23:33:02.727107 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace delete kitchen-terraform-aws-inspec-demo-ubuntu`
+I, [2017-12-11T23:33:02.777072 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[32mDeleted workspace "kitchen-terraform-aws-inspec-demo-ubuntu"![0m
+I, [2017-12-11T23:33:02.794434 #20518]  INFO -- aws-inspec-demo-ubuntu: Finished destroying <aws-inspec-demo-ubuntu> (0m53.41s).
+I, [2017-12-11T23:33:02.794835 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Testing <aws-inspec-demo-ubuntu>
+I, [2017-12-11T23:33:02.794951 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Creating <aws-inspec-demo-ubuntu>...
+W, [2017-12-11T23:33:02.795137 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform init -input=false -lock=true -lock-timeout=0s  -upgrade -force-copy -backend=true  -get=true -get-plugins=true  -verify-plugins=true /Users/yarick/Downloads/tf_aws_cluster`
+I, [2017-12-11T23:33:02.839314 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:02.839484 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1mInitializing provider plugins...[0m
+I, [2017-12-11T23:33:02.839525 #20518]  INFO -- aws-inspec-demo-ubuntu: - Checking for available provider plugins on https://releases.hashicorp.com...
+I, [2017-12-11T23:33:03.087664 #20518]  INFO -- aws-inspec-demo-ubuntu: - Downloading plugin for provider "aws" (1.5.0)...
+I, [2017-12-11T23:33:04.109187 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:04.109407 #20518]  INFO -- aws-inspec-demo-ubuntu: The following providers do not have any version constraints in configuration,
+I, [2017-12-11T23:33:04.109454 #20518]  INFO -- aws-inspec-demo-ubuntu: so the latest version was installed.
+I, [2017-12-11T23:33:04.109478 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:04.109574 #20518]  INFO -- aws-inspec-demo-ubuntu: To prevent automatic upgrades to new major versions that may contain breaking
+I, [2017-12-11T23:33:04.109608 #20518]  INFO -- aws-inspec-demo-ubuntu: changes, it is recommended to add version = "..." constraints to the
+I, [2017-12-11T23:33:04.109738 #20518]  INFO -- aws-inspec-demo-ubuntu: corresponding provider blocks in configuration, with the constraint strings
+I, [2017-12-11T23:33:04.109768 #20518]  INFO -- aws-inspec-demo-ubuntu: suggested below.
+I, [2017-12-11T23:33:04.109801 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:04.109908 #20518]  INFO -- aws-inspec-demo-ubuntu: * provider.aws: version = "~> 1.5"
+I, [2017-12-11T23:33:04.109931 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:04.109954 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+W, [2017-12-11T23:33:04.127269 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace new kitchen-terraform-aws-inspec-demo-ubuntu`
+I, [2017-12-11T23:33:04.169506 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[32m[1mCreated and switched to workspace "kitchen-terraform-aws-inspec-demo-ubuntu"![0m[32m
+I, [2017-12-11T23:33:04.169789 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:04.170735 #20518]  INFO -- aws-inspec-demo-ubuntu: You're now on a new, empty workspace. Workspaces isolate their state,
+I, [2017-12-11T23:33:04.170792 #20518]  INFO -- aws-inspec-demo-ubuntu: so if you run "terraform plan" Terraform will not see any existing state
+I, [2017-12-11T23:33:04.170827 #20518]  INFO -- aws-inspec-demo-ubuntu: for this configuration.[0m
+I, [2017-12-11T23:33:04.184412 #20518]  INFO -- aws-inspec-demo-ubuntu: Finished creating <aws-inspec-demo-ubuntu> (0m1.39s).
+I, [2017-12-11T23:33:04.184645 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Converging <aws-inspec-demo-ubuntu>...
+W, [2017-12-11T23:33:04.185190 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace select kitchen-terraform-aws-inspec-demo-ubuntu`
+W, [2017-12-11T23:33:04.242700 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform get -update /Users/yarick/Downloads/tf_aws_cluster`
+W, [2017-12-11T23:33:04.297441 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/tf_aws_cluster/testing.tfvars /Users/yarick/Downloads/tf_aws_cluster`
+W, [2017-12-11T23:33:04.631567 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform apply -lock=true -lock-timeout=0s -input=false -auto-approve=true  -parallelism=10 -refresh=true  -var-file=/Users/yarick/Downloads/tf_aws_cluster/testing.tfvars /Users/yarick/Downloads/tf_aws_cluster`
+I, [2017-12-11T23:33:06.960757 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Creating...[0m
+I, [2017-12-11T23:33:06.960963 #20518]  INFO -- aws-inspec-demo-ubuntu:   acceleration_status: "" => "<computed>"
+I, [2017-12-11T23:33:06.961118 #20518]  INFO -- aws-inspec-demo-ubuntu:   acl:                 "" => "public-read"
+I, [2017-12-11T23:33:06.961161 #20518]  INFO -- aws-inspec-demo-ubuntu:   arn:                 "" => "<computed>"
+I, [2017-12-11T23:33:06.961212 #20518]  INFO -- aws-inspec-demo-ubuntu:   bucket:              "" => "aws_demo_bucket_1"
+I, [2017-12-11T23:33:06.961277 #20518]  INFO -- aws-inspec-demo-ubuntu:   bucket_domain_name:  "" => "<computed>"
+I, [2017-12-11T23:33:06.962078 #20518]  INFO -- aws-inspec-demo-ubuntu:   force_destroy:       "" => "false"
+I, [2017-12-11T23:33:06.962134 #20518]  INFO -- aws-inspec-demo-ubuntu:   hosted_zone_id:      "" => "<computed>"
+I, [2017-12-11T23:33:06.962201 #20518]  INFO -- aws-inspec-demo-ubuntu:   region:              "" => "<computed>"
+I, [2017-12-11T23:33:06.962258 #20518]  INFO -- aws-inspec-demo-ubuntu:   request_payer:       "" => "<computed>"
+I, [2017-12-11T23:33:06.962299 #20518]  INFO -- aws-inspec-demo-ubuntu:   tags.%:              "" => "2"
+I, [2017-12-11T23:33:06.962353 #20518]  INFO -- aws-inspec-demo-ubuntu:   tags.Environment:    "" => "prod"
+I, [2017-12-11T23:33:06.962386 #20518]  INFO -- aws-inspec-demo-ubuntu:   tags.Name:           "" => "aws_demo_bucket"
+I, [2017-12-11T23:33:06.962416 #20518]  INFO -- aws-inspec-demo-ubuntu:   versioning.#:        "" => "<computed>"
+I, [2017-12-11T23:33:06.962448 #20518]  INFO -- aws-inspec-demo-ubuntu:   website_domain:      "" => "<computed>"
+I, [2017-12-11T23:33:06.962484 #20518]  INFO -- aws-inspec-demo-ubuntu:   website_endpoint:    "" => "<computed>"[0m
+I, [2017-12-11T23:33:06.962526 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Creating...[0m
+I, [2017-12-11T23:33:06.962605 #20518]  INFO -- aws-inspec-demo-ubuntu:   ami:                               "" => "ami-fce3c696"
+I, [2017-12-11T23:33:06.962637 #20518]  INFO -- aws-inspec-demo-ubuntu:   associate_public_ip_address:       "" => "<computed>"
+I, [2017-12-11T23:33:06.962663 #20518]  INFO -- aws-inspec-demo-ubuntu:   availability_zone:                 "" => "<computed>"
+I, [2017-12-11T23:33:06.962690 #20518]  INFO -- aws-inspec-demo-ubuntu:   ebs_block_device.#:                "" => "<computed>"
+I, [2017-12-11T23:33:06.963231 #20518]  INFO -- aws-inspec-demo-ubuntu:   ephemeral_block_device.#:          "" => "<computed>"
+I, [2017-12-11T23:33:06.963271 #20518]  INFO -- aws-inspec-demo-ubuntu:   instance_state:                    "" => "<computed>"
+I, [2017-12-11T23:33:06.963321 #20518]  INFO -- aws-inspec-demo-ubuntu:   instance_type:                     "" => "t2.micro"
+I, [2017-12-11T23:33:06.963355 #20518]  INFO -- aws-inspec-demo-ubuntu:   ipv6_address_count:                "" => "<computed>"
+I, [2017-12-11T23:33:06.963458 #20518]  INFO -- aws-inspec-demo-ubuntu:   ipv6_addresses.#:                  "" => "<computed>"
+I, [2017-12-11T23:33:06.963540 #20518]  INFO -- aws-inspec-demo-ubuntu:   key_name:                          "" => "inspec1"
+I, [2017-12-11T23:33:06.963648 #20518]  INFO -- aws-inspec-demo-ubuntu:   network_interface.#:               "" => "<computed>"
+I, [2017-12-11T23:33:06.963702 #20518]  INFO -- aws-inspec-demo-ubuntu:   network_interface_id:              "" => "<computed>"
+I, [2017-12-11T23:33:06.963786 #20518]  INFO -- aws-inspec-demo-ubuntu:   placement_group:                   "" => "<computed>"
+I, [2017-12-11T23:33:06.963864 #20518]  INFO -- aws-inspec-demo-ubuntu:   primary_network_interface_id:      "" => "<computed>"
+I, [2017-12-11T23:33:06.963953 #20518]  INFO -- aws-inspec-demo-ubuntu:   private_dns:                       "" => "<computed>"
+I, [2017-12-11T23:33:06.964017 #20518]  INFO -- aws-inspec-demo-ubuntu:   private_ip:                        "" => "<computed>"
+I, [2017-12-11T23:33:06.964115 #20518]  INFO -- aws-inspec-demo-ubuntu:   public_dns:                        "" => "<computed>"
+I, [2017-12-11T23:33:06.965173 #20518]  INFO -- aws-inspec-demo-ubuntu:   public_ip:                         "" => "<computed>"
+I, [2017-12-11T23:33:06.965230 #20518]  INFO -- aws-inspec-demo-ubuntu:   root_block_device.#:               "" => "<computed>"
+I, [2017-12-11T23:33:06.965261 #20518]  INFO -- aws-inspec-demo-ubuntu:   security_groups.#:                 "" => "<computed>"
+I, [2017-12-11T23:33:06.965299 #20518]  INFO -- aws-inspec-demo-ubuntu:   source_dest_check:                 "" => "true"
+I, [2017-12-11T23:33:06.965358 #20518]  INFO -- aws-inspec-demo-ubuntu:   subnet_id:                         "" => "subnet-e6fb64cc"
+I, [2017-12-11T23:33:06.965389 #20518]  INFO -- aws-inspec-demo-ubuntu:   tenancy:                           "" => "<computed>"
+I, [2017-12-11T23:33:06.965414 #20518]  INFO -- aws-inspec-demo-ubuntu:   volume_tags.%:                     "" => "<computed>"
+I, [2017-12-11T23:33:06.965455 #20518]  INFO -- aws-inspec-demo-ubuntu:   vpc_security_group_ids.#:          "" => "1"
+I, [2017-12-11T23:33:06.965497 #20518]  INFO -- aws-inspec-demo-ubuntu:   vpc_security_group_ids.4141507527: "" => "sg-646b1b11"[0m
+I, [2017-12-11T23:33:09.152567 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Creation complete after 2s (ID: aws_demo_bucket_1)[0m[0m
+I, [2017-12-11T23:33:16.961455 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still creating... (10s elapsed)[0m[0m
+I, [2017-12-11T23:33:19.222440 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Creation complete after 12s (ID: i-019c4a98ae51658cb)[0m[0m
+I, [2017-12-11T23:33:19.231035 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32m
+I, [2017-12-11T23:33:19.231341 #20518]  INFO -- aws-inspec-demo-ubuntu: Apply complete! Resources: 2 added, 0 changed, 0 destroyed.[0m
+I, [2017-12-11T23:33:19.231694 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32m
+I, [2017-12-11T23:33:19.231861 #20518]  INFO -- aws-inspec-demo-ubuntu: Outputs:
+I, [2017-12-11T23:33:19.231985 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:19.232044 #20518]  INFO -- aws-inspec-demo-ubuntu: public_dns = ec2-52-207-196-28.compute-1.amazonaws.com[0m
+W, [2017-12-11T23:33:19.251525 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform output -json`
+I, [2017-12-11T23:33:19.304925 #20518]  INFO -- aws-inspec-demo-ubuntu: {
+I, [2017-12-11T23:33:19.305076 #20518]  INFO -- aws-inspec-demo-ubuntu:     "public_dns": {
+I, [2017-12-11T23:33:19.305126 #20518]  INFO -- aws-inspec-demo-ubuntu:  "sensitive": false,
+I, [2017-12-11T23:33:19.305160 #20518]  INFO -- aws-inspec-demo-ubuntu:  "type": "string",
+I, [2017-12-11T23:33:19.305366 #20518]  INFO -- aws-inspec-demo-ubuntu:  "value": "ec2-52-207-196-28.compute-1.amazonaws.com"
+I, [2017-12-11T23:33:19.305397 #20518]  INFO -- aws-inspec-demo-ubuntu:     }
+I, [2017-12-11T23:33:19.305423 #20518]  INFO -- aws-inspec-demo-ubuntu: }
+I, [2017-12-11T23:33:19.320483 #20518]  INFO -- aws-inspec-demo-ubuntu: Finished converging <aws-inspec-demo-ubuntu> (0m15.13s).
+I, [2017-12-11T23:33:19.320643 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Setting up <aws-inspec-demo-ubuntu>...
+I, [2017-12-11T23:33:19.321981 #20518]  INFO -- aws-inspec-demo-ubuntu: Finished setting up <aws-inspec-demo-ubuntu> (0m0.00s).
+I, [2017-12-11T23:33:19.322089 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Verifying <aws-inspec-demo-ubuntu>...
+I, [2017-12-11T23:33:19.322839 #20518]  INFO -- aws-inspec-demo-ubuntu: Verifying host 'localhost' of group 'aws-inspec-demo'
+I, [2017-12-11T23:33:19.449899 #20518]  INFO -- aws-inspec-demo-ubuntu: Loaded aws-inspec-demo 
+E, [2017-12-11T23:33:31.472790 #20518] ERROR -- aws-inspec-demo-ubuntu: Verify failed on instance <aws-inspec-demo-ubuntu>.
+E, [2017-12-11T23:33:31.472912 #20518] ERROR -- aws-inspec-demo-ubuntu: ------Exception-------
+E, [2017-12-11T23:33:31.472939 #20518] ERROR -- aws-inspec-demo-ubuntu: Class: Kitchen::ActionFailed
+E, [2017-12-11T23:33:31.472959 #20518] ERROR -- aws-inspec-demo-ubuntu: Message: Inspec Runner returns 1
+E, [2017-12-11T23:33:31.472977 #20518] ERROR -- aws-inspec-demo-ubuntu: ----------------------
+E, [2017-12-11T23:33:31.472994 #20518] ERROR -- aws-inspec-demo-ubuntu: ------Backtrace-------
+E, [2017-12-11T23:33:31.473011 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-inspec-0.20.0/lib/kitchen/verifier/inspec.rb:96:in `call'
+E, [2017-12-11T23:33:31.473029 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:116:in `block (2 levels) in call'
+E, [2017-12-11T23:33:31.473050 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:68:in `block (5 levels) in call'
+E, [2017-12-11T23:33:31.473069 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `each'
+E, [2017-12-11T23:33:31.473086 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `block (4 levels) in call'
+E, [2017-12-11T23:33:31.473104 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-11T23:33:31.473122 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:87:in `fmap'
+E, [2017-12-11T23:33:31.473139 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:62:in `block (3 levels) in call'
+E, [2017-12-11T23:33:31.473156 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:24:in `lift'
+E, [2017-12-11T23:33:31.473174 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:200:in `Try'
+E, [2017-12-11T23:33:31.473191 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:52:in `block (2 levels) in call'
+E, [2017-12-11T23:33:31.473209 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-11T23:33:31.473226 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:51:in `block in call'
+E, [2017-12-11T23:33:31.473243 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:254:in `block (2 levels) in traverse'
+E, [2017-12-11T23:33:31.473260 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-11T23:33:31.473278 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:253:in `block in traverse'
+E, [2017-12-11T23:33:31.473315 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `block in fold_left'
+E, [2017-12-11T23:33:31.473334 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `each'
+E, [2017-12-11T23:33:31.473352 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `reduce'
+E, [2017-12-11T23:33:31.473369 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `fold_left'
+E, [2017-12-11T23:33:31.473386 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:252:in `traverse'
+E, [2017-12-11T23:33:31.473404 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:49:in `call'
+E, [2017-12-11T23:33:31.473421 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:101:in `block in call'
+E, [2017-12-11T23:33:31.473438 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-11T23:33:31.473455 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:99:in `call'
+E, [2017-12-11T23:33:31.473472 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:434:in `block in verify_action'
+E, [2017-12-11T23:33:31.473490 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-11T23:33:31.473507 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-11T23:33:31.473524 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-11T23:33:31.473592 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-11T23:33:31.473610 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:426:in `verify_action'
+E, [2017-12-11T23:33:31.473627 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-11T23:33:31.473645 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-11T23:33:31.473662 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-11T23:33:31.473679 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:157:in `verify'
+E, [2017-12-11T23:33:31.473696 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:186:in `block in test'
+E, [2017-12-11T23:33:31.473713 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-11T23:33:31.473730 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:182:in `test'
+E, [2017-12-11T23:33:31.473747 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-11T23:33:31.473780 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-11T23:33:31.473798 #20518] ERROR -- aws-inspec-demo-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-11T23:33:31.473816 #20518] ERROR -- aws-inspec-demo-ubuntu: ----End Backtrace-----
+I, [2017-12-11T23:33:31.480673 #20518]  INFO -- aws-inspec-demo-ubuntu: -----> Destroying <aws-inspec-demo-ubuntu>...
+W, [2017-12-11T23:33:31.481310 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform init -input=false -lock=true -lock-timeout=0s  -force-copy -backend=true  -get=true -get-plugins=true  -verify-plugins=true /Users/yarick/Downloads/tf_aws_cluster`
+I, [2017-12-11T23:33:31.527530 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:31.527694 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1mInitializing provider plugins...[0m
+I, [2017-12-11T23:33:31.744973 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:31.745105 #20518]  INFO -- aws-inspec-demo-ubuntu: The following providers do not have any version constraints in configuration,
+I, [2017-12-11T23:33:31.745197 #20518]  INFO -- aws-inspec-demo-ubuntu: so the latest version was installed.
+I, [2017-12-11T23:33:31.745230 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:31.745312 #20518]  INFO -- aws-inspec-demo-ubuntu: To prevent automatic upgrades to new major versions that may contain breaking
+I, [2017-12-11T23:33:31.745338 #20518]  INFO -- aws-inspec-demo-ubuntu: changes, it is recommended to add version = "..." constraints to the
+I, [2017-12-11T23:33:31.745560 #20518]  INFO -- aws-inspec-demo-ubuntu: corresponding provider blocks in configuration, with the constraint strings
+I, [2017-12-11T23:33:31.745597 #20518]  INFO -- aws-inspec-demo-ubuntu: suggested below.
+I, [2017-12-11T23:33:31.745631 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:31.745657 #20518]  INFO -- aws-inspec-demo-ubuntu: * provider.aws: version = "~> 1.5"
+I, [2017-12-11T23:33:31.745687 #20518]  INFO -- aws-inspec-demo-ubuntu: 
+I, [2017-12-11T23:33:31.745827 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+W, [2017-12-11T23:33:31.761323 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace select kitchen-terraform-aws-inspec-demo-ubuntu`
+W, [2017-12-11T23:33:31.817764 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform destroy -force -lock=true -lock-timeout=0s -input=false  -parallelism=10 -refresh=true  -var-file=/Users/yarick/Downloads/tf_aws_cluster/testing.tfvars /Users/yarick/Downloads/tf_aws_cluster`
+I, [2017-12-11T23:33:33.324985 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Refreshing state... (ID: aws_demo_bucket_1)[0m
+I, [2017-12-11T23:33:33.325097 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Refreshing state... (ID: i-019c4a98ae51658cb)[0m
+I, [2017-12-11T23:33:34.696849 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Destroying... (ID: aws_demo_bucket_1)[0m[0m
+I, [2017-12-11T23:33:34.697054 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Destroying... (ID: i-019c4a98ae51658cb)[0m[0m
+I, [2017-12-11T23:33:34.991276 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Destruction complete after 0s[0m[0m
+I, [2017-12-11T23:33:44.698373 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 10s elapsed)[0m[0m
+I, [2017-12-11T23:33:54.700126 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 20s elapsed)[0m[0m
+I, [2017-12-11T23:34:04.700909 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 30s elapsed)[0m[0m
+I, [2017-12-11T23:34:14.702119 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 40s elapsed)[0m[0m
+I, [2017-12-11T23:34:24.702926 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 50s elapsed)[0m[0m
+I, [2017-12-11T23:34:34.703352 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 1m0s elapsed)[0m[0m
+I, [2017-12-11T23:34:44.703217 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 1m10s elapsed)[0m[0m
+I, [2017-12-11T23:34:54.704126 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 1m20s elapsed)[0m[0m
+I, [2017-12-11T23:35:04.704367 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 1m30s elapsed)[0m[0m
+I, [2017-12-11T23:35:14.704852 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 1m40s elapsed)[0m[0m
+I, [2017-12-11T23:35:24.705697 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 1m50s elapsed)[0m[0m
+I, [2017-12-11T23:35:34.707058 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 2m0s elapsed)[0m[0m
+I, [2017-12-11T23:35:44.707387 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 2m10s elapsed)[0m[0m
+I, [2017-12-11T23:35:54.707442 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-019c4a98ae51658cb, 2m20s elapsed)[0m[0m
+I, [2017-12-11T23:35:55.447600 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1maws_instance.example: Destruction complete after 2m20s[0m[0m
+I, [2017-12-11T23:35:55.455482 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[1m[32m
+I, [2017-12-11T23:35:55.455647 #20518]  INFO -- aws-inspec-demo-ubuntu: Destroy complete! Resources: 2 destroyed.[0m
+W, [2017-12-11T23:35:55.476513 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace select default`
+I, [2017-12-11T23:35:55.523129 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[32mSwitched to workspace "default".[0m
+W, [2017-12-11T23:35:55.540232 #20518]  WARN -- aws-inspec-demo-ubuntu: Running command `terraform workspace delete kitchen-terraform-aws-inspec-demo-ubuntu`
+I, [2017-12-11T23:35:55.588953 #20518]  INFO -- aws-inspec-demo-ubuntu: [0m[32mDeleted workspace "kitchen-terraform-aws-inspec-demo-ubuntu"![0m
+I, [2017-12-11T23:35:55.604993 #20518]  INFO -- aws-inspec-demo-ubuntu: Finished destroying <aws-inspec-demo-ubuntu> (2m24.12s).

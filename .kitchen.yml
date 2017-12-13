@@ -1,0 +1,23 @@
+---
+  name: terraform
+  variable_files:
+    - testing.tfvars
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: ubuntu
+
+transport:
+  name: ssh
+  ssh_key: ~/.ssh/<%= ENV['AWS_SSH_KEY_ID'] %>.pem
+
+verifier:
+  name: terraform
+  #format: doc
+  groups:
+    - name: aws-demo-baseline
+
+suites:
+  - name: aws-demo-baseline

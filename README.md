@@ -13,31 +13,43 @@ You will need to ensure the needed ruby gems are installed:
 
 You will need to set the following env_vars for this to work.
 
+#####AWS
 - `AWS_...=<your...>`  
 - `AWS_... `
 - ...
 
+#####Terraform
+- `TF_VAR...=<your...>`  
+- `TF_VAR_${var}... `
+- `TF_VAR_subnet_id = sub-nnn`
+
+where ${var} is a variable name from terraform variable file.
+
+Alternatively, variables are defined here
+- `variables.tf    `    (default values)
+- `testing.tfvars  `  (your values)
+
 ## Usage:
 
-1. `bundle exec kitchen create aws-demo-baseline-ubuntu` 
+1. `bundle exec kitchen create aws-demo-baseline-ubuntu`
 2. `bundle exec kitchen converge aws-demo-baseline-ubuntu`
-3. `bundle exec kitchen verify aws-demo-baseline-ubuntu` 
+3. `bundle exec kitchen verify aws-demo-baseline-ubuntu`
 4. `bundle exec kitchen destroy aws-demo-baseline-ubuntu`
 
-or 
+or
 
 1. `bundle exec kitchen test aws-demo-baseline-ubuntu --destroy=always`
 
 ## Quetions:
 
 - see: https://newcontext-oss.github.io/kitchen-terraform/tutorials/amazon_provider_ec2.html
-- see: https://github.com/chef/inspec-aws 
+- see: https://github.com/chef/inspec-aws
 
 ## Updates:
 
-This repo contains a sub-module(s) so rememeber to use a : 
+This repo contains a sub-module(s) so rememeber to use a :
 
-Initial 
+Initial
 - ` git clone https://github.com/aaronlippold/aws-demo-hardening.git --recurse-submodules`
 
 

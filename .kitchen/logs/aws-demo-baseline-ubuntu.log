@@ -1,87 +1,50 @@
-I, [2017-12-13T12:32:29.919830 #69104]  INFO -- aws-demo-baseline-ubuntu: -----> Converging <aws-demo-baseline-ubuntu>...
-W, [2017-12-13T12:32:29.920421 #69104]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform workspace select kitchen-terraform-aws-demo-baseline-ubuntu`
-W, [2017-12-13T12:32:29.979975 #69104]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform get -update /Users/yarick/Downloads/aws-demo-hardening`
-W, [2017-12-13T12:32:30.036315 #69104]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening`
-I, [2017-12-13T12:32:30.074387 #69104]  INFO -- aws-demo-baseline-ubuntu: [31minvalid value "/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars" for flag -var-file: Error parsing /Users/yarick/Downloads/aws-demo-hardening/testing.tfvars: At 9:1: literal not terminated[0m[0m
-I, [2017-12-13T12:32:30.074572 #69104]  INFO -- aws-demo-baseline-ubuntu: [31mUsage: terraform validate [options] [dir]
-I, [2017-12-13T12:32:30.074609 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.074651 #69104]  INFO -- aws-demo-baseline-ubuntu:   Validate the terraform files in a directory. Validation includes a
-I, [2017-12-13T12:32:30.074683 #69104]  INFO -- aws-demo-baseline-ubuntu:   basic check of syntax as well as checking that all variables declared
-I, [2017-12-13T12:32:30.074718 #69104]  INFO -- aws-demo-baseline-ubuntu:   in the configuration are specified in one of the possible ways:
-I, [2017-12-13T12:32:30.074747 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.074779 #69104]  INFO -- aws-demo-baseline-ubuntu:       -var foo=...
-I, [2017-12-13T12:32:30.074811 #69104]  INFO -- aws-demo-baseline-ubuntu:       -var-file=foo.vars
-I, [2017-12-13T12:32:30.074844 #69104]  INFO -- aws-demo-baseline-ubuntu:       TF_VAR_foo environment variable
-I, [2017-12-13T12:32:30.074874 #69104]  INFO -- aws-demo-baseline-ubuntu:       terraform.tfvars
-I, [2017-12-13T12:32:30.074902 #69104]  INFO -- aws-demo-baseline-ubuntu:       default value
-I, [2017-12-13T12:32:30.074933 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.074961 #69104]  INFO -- aws-demo-baseline-ubuntu:   If dir is not specified, then the current directory will be used.
-I, [2017-12-13T12:32:30.074991 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.075064 #69104]  INFO -- aws-demo-baseline-ubuntu: Options:
-I, [2017-12-13T12:32:30.075124 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.075163 #69104]  INFO -- aws-demo-baseline-ubuntu:   -check-variables=true If set to true (default), the command will check
-I, [2017-12-13T12:32:30.075204 #69104]  INFO -- aws-demo-baseline-ubuntu:                  whether all required variables have been specified.
-I, [2017-12-13T12:32:30.075230 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.075252 #69104]  INFO -- aws-demo-baseline-ubuntu:   -no-color             If specified, output won't contain any color.
-I, [2017-12-13T12:32:30.075276 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.075298 #69104]  INFO -- aws-demo-baseline-ubuntu:   -var 'foo=bar'        Set a variable in the Terraform configuration. This
-I, [2017-12-13T12:32:30.075333 #69104]  INFO -- aws-demo-baseline-ubuntu:                  flag can be set multiple times.
-I, [2017-12-13T12:32:30.075430 #69104]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-13T12:32:30.075456 #69104]  INFO -- aws-demo-baseline-ubuntu:   -var-file=foo         Set variables in the Terraform configuration from
-I, [2017-12-13T12:32:30.075483 #69104]  INFO -- aws-demo-baseline-ubuntu:                  a file. If "terraform.tfvars" is present, it will be
-I, [2017-12-13T12:32:30.075510 #69104]  INFO -- aws-demo-baseline-ubuntu:                  automatically loaded if this flag is not specified.[0m[0m
-E, [2017-12-13T12:32:30.089035 #69104] ERROR -- aws-demo-baseline-ubuntu: Converge failed on instance <aws-demo-baseline-ubuntu>.
-E, [2017-12-13T12:32:30.089260 #69104] ERROR -- aws-demo-baseline-ubuntu: ------Exception-------
-E, [2017-12-13T12:32:30.089304 #69104] ERROR -- aws-demo-baseline-ubuntu: Class: Kitchen::ActionFailed
-E, [2017-12-13T12:32:30.089335 #69104] ERROR -- aws-demo-baseline-ubuntu: Message: Running command resulted in failure: Expected process to exit with [0], but received '1'
----- Begin output of terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening ----
-STDOUT: 
-STDERR: [31minvalid value "/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars" for flag -var-file: Error parsing /Users/yarick/Downloads/aws-demo-hardening/testing.tfvars: At 9:1: literal not terminated[0m[0m
-[31mUsage: terraform validate [options] [dir]
-
-  Validate the terraform files in a directory. Validation includes a
-  basic check of syntax as well as checking that all variables declared
-  in the configuration are specified in one of the possible ways:
-
-      -var foo=...
-      -var-file=foo.vars
-      TF_VAR_foo environment variable
-      terraform.tfvars
-      default value
-
-  If dir is not specified, then the current directory will be used.
-
-Options:
-
-  -check-variables=true If set to true (default), the command will check
-                        whether all required variables have been specified.
-
-  -no-color             If specified, output won't contain any color.
-
-  -var 'foo=bar'        Set a variable in the Terraform configuration. This
-                        flag can be set multiple times.
-
-  -var-file=foo         Set variables in the Terraform configuration from
-                        a file. If "terraform.tfvars" is present, it will be
-                        automatically loaded if this flag is not specified.[0m[0m
----- End output of terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening ----
-Ran terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening returned 1
-E, [2017-12-13T12:32:30.089370 #69104] ERROR -- aws-demo-baseline-ubuntu: ----------------------
-E, [2017-12-13T12:32:30.089398 #69104] ERROR -- aws-demo-baseline-ubuntu: ------Backtrace-------
-E, [2017-12-13T12:32:30.089423 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:100:in `block in call'
-E, [2017-12-13T12:32:30.089451 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:159:in `or'
-E, [2017-12-13T12:32:30.089486 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:99:in `call'
-E, [2017-12-13T12:32:30.089513 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:384:in `block in converge_action'
-E, [2017-12-13T12:32:30.089540 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
-E, [2017-12-13T12:32:30.089568 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
-E, [2017-12-13T12:32:30.089595 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2017-12-13T12:32:30.089622 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
-E, [2017-12-13T12:32:30.089649 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:380:in `converge_action'
-E, [2017-12-13T12:32:30.089676 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
-E, [2017-12-13T12:32:30.089726 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
-E, [2017-12-13T12:32:30.089760 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
-E, [2017-12-13T12:32:30.089789 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
-E, [2017-12-13T12:32:30.089816 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
-E, [2017-12-13T12:32:30.089842 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
-E, [2017-12-13T12:32:30.089869 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
-E, [2017-12-13T12:32:30.089895 #69104] ERROR -- aws-demo-baseline-ubuntu: ----End Backtrace-----
+I, [2017-12-13T12:59:48.290484 #73207]  INFO -- aws-demo-baseline-ubuntu: -----> Setting up <aws-demo-baseline-ubuntu>...
+I, [2017-12-13T12:59:48.292062 #73207]  INFO -- aws-demo-baseline-ubuntu: Finished setting up <aws-demo-baseline-ubuntu> (0m0.00s).
+I, [2017-12-13T12:59:48.292667 #73207]  INFO -- aws-demo-baseline-ubuntu: -----> Verifying <aws-demo-baseline-ubuntu>...
+I, [2017-12-13T12:59:48.298130 #73207]  INFO -- aws-demo-baseline-ubuntu: Verifying host 'localhost' of group 'aws-demo-baseline'
+I, [2017-12-13T12:59:48.422960 #73207]  INFO -- aws-demo-baseline-ubuntu: Loaded aws-inspec-demo 
+E, [2017-12-13T13:00:01.060557 #73207] ERROR -- aws-demo-baseline-ubuntu: Verify failed on instance <aws-demo-baseline-ubuntu>.
+E, [2017-12-13T13:00:01.060674 #73207] ERROR -- aws-demo-baseline-ubuntu: ------Exception-------
+E, [2017-12-13T13:00:01.060699 #73207] ERROR -- aws-demo-baseline-ubuntu: Class: Kitchen::ActionFailed
+E, [2017-12-13T13:00:01.060718 #73207] ERROR -- aws-demo-baseline-ubuntu: Message: Inspec Runner returns 1
+E, [2017-12-13T13:00:01.060736 #73207] ERROR -- aws-demo-baseline-ubuntu: ----------------------
+E, [2017-12-13T13:00:01.060753 #73207] ERROR -- aws-demo-baseline-ubuntu: ------Backtrace-------
+E, [2017-12-13T13:00:01.060771 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-inspec-0.20.0/lib/kitchen/verifier/inspec.rb:96:in `call'
+E, [2017-12-13T13:00:01.060791 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:116:in `block (2 levels) in call'
+E, [2017-12-13T13:00:01.060809 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:68:in `block (5 levels) in call'
+E, [2017-12-13T13:00:01.060827 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `each'
+E, [2017-12-13T13:00:01.060844 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `block (4 levels) in call'
+E, [2017-12-13T13:00:01.060862 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.060879 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:87:in `fmap'
+E, [2017-12-13T13:00:01.060897 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:62:in `block (3 levels) in call'
+E, [2017-12-13T13:00:01.060930 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:24:in `lift'
+E, [2017-12-13T13:00:01.060947 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:200:in `Try'
+E, [2017-12-13T13:00:01.060963 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:52:in `block (2 levels) in call'
+E, [2017-12-13T13:00:01.060980 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.060996 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:51:in `block in call'
+E, [2017-12-13T13:00:01.061013 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:254:in `block (2 levels) in traverse'
+E, [2017-12-13T13:00:01.061029 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.061077 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:253:in `block in traverse'
+E, [2017-12-13T13:00:01.061094 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `block in fold_left'
+E, [2017-12-13T13:00:01.061109 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `each'
+E, [2017-12-13T13:00:01.061124 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `reduce'
+E, [2017-12-13T13:00:01.061139 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `fold_left'
+E, [2017-12-13T13:00:01.061154 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:252:in `traverse'
+E, [2017-12-13T13:00:01.061168 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:49:in `call'
+E, [2017-12-13T13:00:01.061183 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:101:in `block in call'
+E, [2017-12-13T13:00:01.061201 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.061215 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:99:in `call'
+E, [2017-12-13T13:00:01.061230 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:434:in `block in verify_action'
+E, [2017-12-13T13:00:01.061244 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-13T13:00:01.061259 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-13T13:00:01.061273 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-13T13:00:01.061288 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-13T13:00:01.061303 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:426:in `verify_action'
+E, [2017-12-13T13:00:01.061317 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-13T13:00:01.061331 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-13T13:00:01.061348 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-13T13:00:01.061363 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:157:in `verify'
+E, [2017-12-13T13:00:01.061378 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-13T13:00:01.061392 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-13T13:00:01.061407 #73207] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-13T13:00:01.061434 #73207] ERROR -- aws-demo-baseline-ubuntu: ----End Backtrace-----

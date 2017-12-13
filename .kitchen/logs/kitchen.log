@@ -1,107 +1,120 @@
-I, [2017-12-13T12:32:28.023273 #69104]  INFO -- Kitchen: -----> Starting Kitchen (v1.16.0)
-W, [2017-12-13T12:32:28.360231 #69104]  WARN -- Kitchen: Running command `terraform version`
-I, [2017-12-13T12:32:28.402223 #69104]  INFO -- Kitchen: Terraform v0.11.1
-I, [2017-12-13T12:32:28.627194 #69104]  INFO -- Kitchen: + provider.aws v1.5.0
-I, [2017-12-13T12:32:28.627264 #69104]  INFO -- Kitchen: 
-W, [2017-12-13T12:32:28.649681 #69104]  WARN -- Kitchen: Terraform v0.11.1 is supported
-I, [2017-12-13T12:32:29.919719 #69104]  INFO -- Kitchen: -----> Converging <aws-demo-baseline-ubuntu>...
-E, [2017-12-13T12:32:30.091940 #69104] ERROR -- Kitchen: ------Exception-------
-E, [2017-12-13T12:32:30.092000 #69104] ERROR -- Kitchen: Class: Kitchen::ActionFailed
-E, [2017-12-13T12:32:30.092036 #69104] ERROR -- Kitchen: Message: 1 actions failed.
->>>>>>     Converge failed on instance <aws-demo-baseline-ubuntu>.  Please see .kitchen/logs/aws-demo-baseline-ubuntu.log for more details
-E, [2017-12-13T12:32:30.092068 #69104] ERROR -- Kitchen: ----------------------
-E, [2017-12-13T12:32:30.092096 #69104] ERROR -- Kitchen: ------Backtrace-------
-E, [2017-12-13T12:32:30.092124 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:183:in `report_errors'
-E, [2017-12-13T12:32:30.092152 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:174:in `run_action'
-E, [2017-12-13T12:32:30.092181 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command/action.rb:36:in `block in call'
-E, [2017-12-13T12:32:30.092216 #69104] ERROR -- Kitchen: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2017-12-13T12:32:30.092244 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command/action.rb:34:in `call'
-E, [2017-12-13T12:32:30.092272 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/cli.rb:53:in `perform'
-E, [2017-12-13T12:32:30.092299 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/cli.rb:187:in `block (2 levels) in <class:CLI>'
-E, [2017-12-13T12:32:30.092327 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
-E, [2017-12-13T12:32:30.092355 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
-E, [2017-12-13T12:32:30.092383 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/cli.rb:334:in `invoke_task'
-E, [2017-12-13T12:32:30.092410 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
-E, [2017-12-13T12:32:30.092438 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
-E, [2017-12-13T12:32:30.092465 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/bin/kitchen:13:in `block in <top (required)>'
-E, [2017-12-13T12:32:30.092499 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/errors.rb:171:in `with_friendly_errors'
-E, [2017-12-13T12:32:30.092527 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/bin/kitchen:13:in `<top (required)>'
-E, [2017-12-13T12:32:30.092554 #69104] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
-E, [2017-12-13T12:32:30.092581 #69104] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
-E, [2017-12-13T12:32:30.092609 #69104] ERROR -- Kitchen: ----End Backtrace-----
-E, [2017-12-13T12:32:30.092640 #69104] ERROR -- Kitchen: -Composite Exception--
-E, [2017-12-13T12:32:30.092678 #69104] ERROR -- Kitchen: Class: Kitchen::InstanceFailure
-E, [2017-12-13T12:32:30.092699 #69104] ERROR -- Kitchen: Message: Converge failed on instance <aws-demo-baseline-ubuntu>.  Please see .kitchen/logs/aws-demo-baseline-ubuntu.log for more details
-E, [2017-12-13T12:32:30.092721 #69104] ERROR -- Kitchen: ----------------------
-E, [2017-12-13T12:32:30.092765 #69104] ERROR -- Kitchen: ------Backtrace-------
-E, [2017-12-13T12:32:30.092788 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:100:in `block in call'
-E, [2017-12-13T12:32:30.092811 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:159:in `or'
-E, [2017-12-13T12:32:30.092837 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:99:in `call'
-E, [2017-12-13T12:32:30.092860 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:384:in `block in converge_action'
-E, [2017-12-13T12:32:30.092882 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
-E, [2017-12-13T12:32:30.092903 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
-E, [2017-12-13T12:32:30.092925 #69104] ERROR -- Kitchen: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2017-12-13T12:32:30.092947 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
-E, [2017-12-13T12:32:30.092969 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:380:in `converge_action'
-E, [2017-12-13T12:32:30.092990 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
-E, [2017-12-13T12:32:30.093012 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
-E, [2017-12-13T12:32:30.093033 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
-E, [2017-12-13T12:32:30.093060 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
-E, [2017-12-13T12:32:30.093082 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
-E, [2017-12-13T12:32:30.093104 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
-E, [2017-12-13T12:32:30.093125 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
-E, [2017-12-13T12:32:30.093147 #69104] ERROR -- Kitchen: ----End Backtrace-----
-E, [2017-12-13T12:32:30.093168 #69104] ERROR -- Kitchen: ---Nested Exception---
-E, [2017-12-13T12:32:30.093189 #69104] ERROR -- Kitchen: Class: Kitchen::ActionFailed
-E, [2017-12-13T12:32:30.093210 #69104] ERROR -- Kitchen: Message: Running command resulted in failure: Expected process to exit with [0], but received '1'
----- Begin output of terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening ----
-STDOUT: 
-STDERR: [31minvalid value "/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars" for flag -var-file: Error parsing /Users/yarick/Downloads/aws-demo-hardening/testing.tfvars: At 9:1: literal not terminated[0m[0m
-[31mUsage: terraform validate [options] [dir]
-
-  Validate the terraform files in a directory. Validation includes a
-  basic check of syntax as well as checking that all variables declared
-  in the configuration are specified in one of the possible ways:
-
-      -var foo=...
-      -var-file=foo.vars
-      TF_VAR_foo environment variable
-      terraform.tfvars
-      default value
-
-  If dir is not specified, then the current directory will be used.
-
-Options:
-
-  -check-variables=true If set to true (default), the command will check
-                        whether all required variables have been specified.
-
-  -no-color             If specified, output won't contain any color.
-
-  -var 'foo=bar'        Set a variable in the Terraform configuration. This
-                        flag can be set multiple times.
-
-  -var-file=foo         Set variables in the Terraform configuration from
-                        a file. If "terraform.tfvars" is present, it will be
-                        automatically loaded if this flag is not specified.[0m[0m
----- End output of terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening ----
-Ran terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening returned 1
-E, [2017-12-13T12:32:30.093257 #69104] ERROR -- Kitchen: ----------------------
-E, [2017-12-13T12:32:30.093280 #69104] ERROR -- Kitchen: ------Backtrace-------
-E, [2017-12-13T12:32:30.093302 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:100:in `block in call'
-E, [2017-12-13T12:32:30.093324 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:159:in `or'
-E, [2017-12-13T12:32:30.093350 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:99:in `call'
-E, [2017-12-13T12:32:30.093373 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:384:in `block in converge_action'
-E, [2017-12-13T12:32:30.093395 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
-E, [2017-12-13T12:32:30.093416 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
-E, [2017-12-13T12:32:30.093438 #69104] ERROR -- Kitchen: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2017-12-13T12:32:30.093460 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
-E, [2017-12-13T12:32:30.093481 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:380:in `converge_action'
-E, [2017-12-13T12:32:30.093503 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
-E, [2017-12-13T12:32:30.093524 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
-E, [2017-12-13T12:32:30.093550 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
-E, [2017-12-13T12:32:30.093573 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
-E, [2017-12-13T12:32:30.093595 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
-E, [2017-12-13T12:32:30.093620 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
-E, [2017-12-13T12:32:30.093643 #69104] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
-E, [2017-12-13T12:32:30.093665 #69104] ERROR -- Kitchen: ----End Backtrace-----
+I, [2017-12-13T12:59:46.483161 #73207]  INFO -- Kitchen: -----> Starting Kitchen (v1.16.0)
+W, [2017-12-13T12:59:46.786082 #73207]  WARN -- Kitchen: Running command `terraform version`
+I, [2017-12-13T12:59:46.816522 #73207]  INFO -- Kitchen: Terraform v0.11.1
+I, [2017-12-13T12:59:47.032177 #73207]  INFO -- Kitchen: + provider.aws v1.5.0
+I, [2017-12-13T12:59:47.032243 #73207]  INFO -- Kitchen: 
+W, [2017-12-13T12:59:47.054197 #73207]  WARN -- Kitchen: Terraform v0.11.1 is supported
+I, [2017-12-13T12:59:48.290418 #73207]  INFO -- Kitchen: -----> Setting up <aws-demo-baseline-ubuntu>...
+I, [2017-12-13T12:59:48.292634 #73207]  INFO -- Kitchen: -----> Verifying <aws-demo-baseline-ubuntu>...
+E, [2017-12-13T13:00:01.062389 #73207] ERROR -- Kitchen: ------Exception-------
+E, [2017-12-13T13:00:01.062426 #73207] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2017-12-13T13:00:01.062448 #73207] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Verify failed on instance <aws-demo-baseline-ubuntu>.  Please see .kitchen/logs/aws-demo-baseline-ubuntu.log for more details
+E, [2017-12-13T13:00:01.062486 #73207] ERROR -- Kitchen: ----------------------
+E, [2017-12-13T13:00:01.062517 #73207] ERROR -- Kitchen: ------Backtrace-------
+E, [2017-12-13T13:00:01.062534 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:183:in `report_errors'
+E, [2017-12-13T13:00:01.062552 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:174:in `run_action'
+E, [2017-12-13T13:00:01.062570 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command/action.rb:36:in `block in call'
+E, [2017-12-13T13:00:01.062588 #73207] ERROR -- Kitchen: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-13T13:00:01.062622 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command/action.rb:34:in `call'
+E, [2017-12-13T13:00:01.062643 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/cli.rb:53:in `perform'
+E, [2017-12-13T13:00:01.062664 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/cli.rb:187:in `block (2 levels) in <class:CLI>'
+E, [2017-12-13T13:00:01.062685 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2017-12-13T13:00:01.062706 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2017-12-13T13:00:01.062724 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/cli.rb:334:in `invoke_task'
+E, [2017-12-13T13:00:01.062746 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2017-12-13T13:00:01.062768 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2017-12-13T13:00:01.062790 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2017-12-13T13:00:01.062810 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2017-12-13T13:00:01.062831 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/bin/kitchen:13:in `<top (required)>'
+E, [2017-12-13T13:00:01.062849 #73207] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2017-12-13T13:00:01.062869 #73207] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2017-12-13T13:00:01.062891 #73207] ERROR -- Kitchen: ----End Backtrace-----
+E, [2017-12-13T13:00:01.062911 #73207] ERROR -- Kitchen: -Composite Exception--
+E, [2017-12-13T13:00:01.062931 #73207] ERROR -- Kitchen: Class: Kitchen::InstanceFailure
+E, [2017-12-13T13:00:01.062956 #73207] ERROR -- Kitchen: Message: Verify failed on instance <aws-demo-baseline-ubuntu>.  Please see .kitchen/logs/aws-demo-baseline-ubuntu.log for more details
+E, [2017-12-13T13:00:01.062990 #73207] ERROR -- Kitchen: ----------------------
+E, [2017-12-13T13:00:01.063009 #73207] ERROR -- Kitchen: ------Backtrace-------
+E, [2017-12-13T13:00:01.063028 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-inspec-0.20.0/lib/kitchen/verifier/inspec.rb:96:in `call'
+E, [2017-12-13T13:00:01.063046 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:116:in `block (2 levels) in call'
+E, [2017-12-13T13:00:01.063064 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:68:in `block (5 levels) in call'
+E, [2017-12-13T13:00:01.063107 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `each'
+E, [2017-12-13T13:00:01.063128 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `block (4 levels) in call'
+E, [2017-12-13T13:00:01.063147 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.063165 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:87:in `fmap'
+E, [2017-12-13T13:00:01.063182 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:62:in `block (3 levels) in call'
+E, [2017-12-13T13:00:01.063200 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:24:in `lift'
+E, [2017-12-13T13:00:01.063219 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:200:in `Try'
+E, [2017-12-13T13:00:01.063237 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:52:in `block (2 levels) in call'
+E, [2017-12-13T13:00:01.063254 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.063271 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:51:in `block in call'
+E, [2017-12-13T13:00:01.063289 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:254:in `block (2 levels) in traverse'
+E, [2017-12-13T13:00:01.063308 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.063324 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:253:in `block in traverse'
+E, [2017-12-13T13:00:01.063341 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `block in fold_left'
+E, [2017-12-13T13:00:01.063359 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `each'
+E, [2017-12-13T13:00:01.063376 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `reduce'
+E, [2017-12-13T13:00:01.063394 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `fold_left'
+E, [2017-12-13T13:00:01.063411 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:252:in `traverse'
+E, [2017-12-13T13:00:01.063429 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:49:in `call'
+E, [2017-12-13T13:00:01.063445 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:101:in `block in call'
+E, [2017-12-13T13:00:01.063486 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.063507 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:99:in `call'
+E, [2017-12-13T13:00:01.063525 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:434:in `block in verify_action'
+E, [2017-12-13T13:00:01.063543 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-13T13:00:01.063559 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-13T13:00:01.063577 #73207] ERROR -- Kitchen: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-13T13:00:01.063594 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-13T13:00:01.063612 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:426:in `verify_action'
+E, [2017-12-13T13:00:01.063628 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-13T13:00:01.063646 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-13T13:00:01.063664 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-13T13:00:01.063683 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:157:in `verify'
+E, [2017-12-13T13:00:01.063702 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-13T13:00:01.063720 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-13T13:00:01.063738 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-13T13:00:01.063754 #73207] ERROR -- Kitchen: ----End Backtrace-----
+E, [2017-12-13T13:00:01.063771 #73207] ERROR -- Kitchen: ---Nested Exception---
+E, [2017-12-13T13:00:01.063789 #73207] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2017-12-13T13:00:01.063808 #73207] ERROR -- Kitchen: Message: Inspec Runner returns 1
+E, [2017-12-13T13:00:01.063825 #73207] ERROR -- Kitchen: ----------------------
+E, [2017-12-13T13:00:01.063842 #73207] ERROR -- Kitchen: ------Backtrace-------
+E, [2017-12-13T13:00:01.063858 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-inspec-0.20.0/lib/kitchen/verifier/inspec.rb:96:in `call'
+E, [2017-12-13T13:00:01.063876 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:116:in `block (2 levels) in call'
+E, [2017-12-13T13:00:01.063894 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:68:in `block (5 levels) in call'
+E, [2017-12-13T13:00:01.063912 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `each'
+E, [2017-12-13T13:00:01.063930 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:64:in `block (4 levels) in call'
+E, [2017-12-13T13:00:01.063947 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.063965 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:87:in `fmap'
+E, [2017-12-13T13:00:01.063998 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:62:in `block (3 levels) in call'
+E, [2017-12-13T13:00:01.064017 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:24:in `lift'
+E, [2017-12-13T13:00:01.064037 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/try.rb:200:in `Try'
+E, [2017-12-13T13:00:01.064055 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:52:in `block (2 levels) in call'
+E, [2017-12-13T13:00:01.064073 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.064091 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:51:in `block in call'
+E, [2017-12-13T13:00:01.064108 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:254:in `block (2 levels) in traverse'
+E, [2017-12-13T13:00:01.064126 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.064143 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:253:in `block in traverse'
+E, [2017-12-13T13:00:01.064162 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `block in fold_left'
+E, [2017-12-13T13:00:01.064179 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `each'
+E, [2017-12-13T13:00:01.064198 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `reduce'
+E, [2017-12-13T13:00:01.064217 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:149:in `fold_left'
+E, [2017-12-13T13:00:01.064235 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/list.rb:252:in `traverse'
+E, [2017-12-13T13:00:01.064252 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform/enumerate_groups_and_hostnames.rb:49:in `call'
+E, [2017-12-13T13:00:01.064270 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:101:in `block in call'
+E, [2017-12-13T13:00:01.064288 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/right_biased.rb:48:in `bind'
+E, [2017-12-13T13:00:01.064305 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/verifier/terraform.rb:99:in `call'
+E, [2017-12-13T13:00:01.064322 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:434:in `block in verify_action'
+E, [2017-12-13T13:00:01.064341 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-13T13:00:01.064358 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-13T13:00:01.064376 #73207] ERROR -- Kitchen: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-13T13:00:01.064414 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-13T13:00:01.064433 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:426:in `verify_action'
+E, [2017-12-13T13:00:01.064452 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-13T13:00:01.064492 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-13T13:00:01.064511 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-13T13:00:01.064528 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:157:in `verify'
+E, [2017-12-13T13:00:01.064546 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-13T13:00:01.064562 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-13T13:00:01.064580 #73207] ERROR -- Kitchen: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-13T13:00:01.064597 #73207] ERROR -- Kitchen: ----End Backtrace-----

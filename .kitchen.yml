@@ -1,4 +1,5 @@
 ---
+driver:
   name: terraform
   variable_files:
     - testing.tfvars
@@ -15,7 +16,6 @@ transport:
 
 verifier:
   name: terraform
-  #format: doc
   groups:
     - name: aws-demo-baseline
 

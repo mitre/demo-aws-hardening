@@ -1,35 +1,87 @@
-I, [2017-12-12T22:50:29.750437 #92877]  INFO -- aws-demo-baseline-ubuntu: -----> Destroying <aws-demo-baseline-ubuntu>...
-W, [2017-12-12T22:50:29.751212 #92877]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform init -input=false -lock=true -lock-timeout=0s  -force-copy -backend=true  -get=true -get-plugins=true  -verify-plugins=true /Users/aaronl/hardening/cms-aws-demo/aws-demo-hardening`
-I, [2017-12-12T22:50:29.793730 #92877]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-12T22:50:29.793818 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1mInitializing provider plugins...[0m
-I, [2017-12-12T22:50:30.247180 #92877]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-12T22:50:30.247302 #92877]  INFO -- aws-demo-baseline-ubuntu: The following providers do not have any version constraints in configuration,
-I, [2017-12-12T22:50:30.247341 #92877]  INFO -- aws-demo-baseline-ubuntu: so the latest version was installed.
-I, [2017-12-12T22:50:30.247387 #92877]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-12T22:50:30.247798 #92877]  INFO -- aws-demo-baseline-ubuntu: To prevent automatic upgrades to new major versions that may contain breaking
-I, [2017-12-12T22:50:30.247857 #92877]  INFO -- aws-demo-baseline-ubuntu: changes, it is recommended to add version = "..." constraints to the
-I, [2017-12-12T22:50:30.247906 #92877]  INFO -- aws-demo-baseline-ubuntu: corresponding provider blocks in configuration, with the constraint strings
-I, [2017-12-12T22:50:30.248060 #92877]  INFO -- aws-demo-baseline-ubuntu: suggested below.
-I, [2017-12-12T22:50:30.248100 #92877]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-12T22:50:30.248132 #92877]  INFO -- aws-demo-baseline-ubuntu: * provider.aws: version = "~> 1.5"
-I, [2017-12-12T22:50:30.248157 #92877]  INFO -- aws-demo-baseline-ubuntu: 
-I, [2017-12-12T22:50:30.248259 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
-W, [2017-12-12T22:50:30.265098 #92877]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform workspace select kitchen-terraform-aws-demo-baseline-ubuntu`
-W, [2017-12-12T22:50:30.332173 #92877]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform destroy -force -lock=true -lock-timeout=0s -input=false  -parallelism=10 -refresh=true  -var-file=/Users/aaronl/hardening/cms-aws-demo/aws-demo-hardening/testing.tfvars /Users/aaronl/hardening/cms-aws-demo/aws-demo-hardening`
-I, [2017-12-12T22:50:37.330168 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Refreshing state... (ID: i-0f8269da6b70b51a8)[0m
-I, [2017-12-12T22:50:37.330379 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Refreshing state... (ID: aws_demo_bucket_1)[0m
-I, [2017-12-12T22:51:09.222818 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Destroying... (ID: aws_demo_bucket_1)[0m[0m
-I, [2017-12-12T22:51:09.222999 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Destroying... (ID: i-0f8269da6b70b51a8)[0m[0m
-I, [2017-12-12T22:51:09.663962 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_s3_bucket.aws_demo_bucket: Destruction complete after 1s[0m[0m
-I, [2017-12-12T22:51:19.223343 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-0f8269da6b70b51a8, 10s elapsed)[0m[0m
-I, [2017-12-12T22:51:29.224386 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-0f8269da6b70b51a8, 20s elapsed)[0m[0m
-I, [2017-12-12T22:51:39.224439 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-0f8269da6b70b51a8, 30s elapsed)[0m[0m
-I, [2017-12-12T22:51:49.224327 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Still destroying... (ID: i-0f8269da6b70b51a8, 40s elapsed)[0m[0m
-I, [2017-12-12T22:51:49.340721 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1maws_instance.example: Destruction complete after 40s[0m[0m
-I, [2017-12-12T22:51:49.348941 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[1m[32m
-I, [2017-12-12T22:51:49.349251 #92877]  INFO -- aws-demo-baseline-ubuntu: Destroy complete! Resources: 2 destroyed.[0m
-W, [2017-12-12T22:51:49.371511 #92877]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform workspace select default`
-I, [2017-12-12T22:51:49.424509 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[32mSwitched to workspace "default".[0m
-W, [2017-12-12T22:51:49.441891 #92877]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform workspace delete kitchen-terraform-aws-demo-baseline-ubuntu`
-I, [2017-12-12T22:51:49.493493 #92877]  INFO -- aws-demo-baseline-ubuntu: [0m[32mDeleted workspace "kitchen-terraform-aws-demo-baseline-ubuntu"![0m
-I, [2017-12-12T22:51:49.510552 #92877]  INFO -- aws-demo-baseline-ubuntu: Finished destroying <aws-demo-baseline-ubuntu> (1m19.76s).
+I, [2017-12-13T12:32:29.919830 #69104]  INFO -- aws-demo-baseline-ubuntu: -----> Converging <aws-demo-baseline-ubuntu>...
+W, [2017-12-13T12:32:29.920421 #69104]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform workspace select kitchen-terraform-aws-demo-baseline-ubuntu`
+W, [2017-12-13T12:32:29.979975 #69104]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform get -update /Users/yarick/Downloads/aws-demo-hardening`
+W, [2017-12-13T12:32:30.036315 #69104]  WARN -- aws-demo-baseline-ubuntu: Running command `terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening`
+I, [2017-12-13T12:32:30.074387 #69104]  INFO -- aws-demo-baseline-ubuntu: [31minvalid value "/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars" for flag -var-file: Error parsing /Users/yarick/Downloads/aws-demo-hardening/testing.tfvars: At 9:1: literal not terminated[0m[0m
+I, [2017-12-13T12:32:30.074572 #69104]  INFO -- aws-demo-baseline-ubuntu: [31mUsage: terraform validate [options] [dir]
+I, [2017-12-13T12:32:30.074609 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.074651 #69104]  INFO -- aws-demo-baseline-ubuntu:   Validate the terraform files in a directory. Validation includes a
+I, [2017-12-13T12:32:30.074683 #69104]  INFO -- aws-demo-baseline-ubuntu:   basic check of syntax as well as checking that all variables declared
+I, [2017-12-13T12:32:30.074718 #69104]  INFO -- aws-demo-baseline-ubuntu:   in the configuration are specified in one of the possible ways:
+I, [2017-12-13T12:32:30.074747 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.074779 #69104]  INFO -- aws-demo-baseline-ubuntu:       -var foo=...
+I, [2017-12-13T12:32:30.074811 #69104]  INFO -- aws-demo-baseline-ubuntu:       -var-file=foo.vars
+I, [2017-12-13T12:32:30.074844 #69104]  INFO -- aws-demo-baseline-ubuntu:       TF_VAR_foo environment variable
+I, [2017-12-13T12:32:30.074874 #69104]  INFO -- aws-demo-baseline-ubuntu:       terraform.tfvars
+I, [2017-12-13T12:32:30.074902 #69104]  INFO -- aws-demo-baseline-ubuntu:       default value
+I, [2017-12-13T12:32:30.074933 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.074961 #69104]  INFO -- aws-demo-baseline-ubuntu:   If dir is not specified, then the current directory will be used.
+I, [2017-12-13T12:32:30.074991 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.075064 #69104]  INFO -- aws-demo-baseline-ubuntu: Options:
+I, [2017-12-13T12:32:30.075124 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.075163 #69104]  INFO -- aws-demo-baseline-ubuntu:   -check-variables=true If set to true (default), the command will check
+I, [2017-12-13T12:32:30.075204 #69104]  INFO -- aws-demo-baseline-ubuntu:                  whether all required variables have been specified.
+I, [2017-12-13T12:32:30.075230 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.075252 #69104]  INFO -- aws-demo-baseline-ubuntu:   -no-color             If specified, output won't contain any color.
+I, [2017-12-13T12:32:30.075276 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.075298 #69104]  INFO -- aws-demo-baseline-ubuntu:   -var 'foo=bar'        Set a variable in the Terraform configuration. This
+I, [2017-12-13T12:32:30.075333 #69104]  INFO -- aws-demo-baseline-ubuntu:                  flag can be set multiple times.
+I, [2017-12-13T12:32:30.075430 #69104]  INFO -- aws-demo-baseline-ubuntu: 
+I, [2017-12-13T12:32:30.075456 #69104]  INFO -- aws-demo-baseline-ubuntu:   -var-file=foo         Set variables in the Terraform configuration from
+I, [2017-12-13T12:32:30.075483 #69104]  INFO -- aws-demo-baseline-ubuntu:                  a file. If "terraform.tfvars" is present, it will be
+I, [2017-12-13T12:32:30.075510 #69104]  INFO -- aws-demo-baseline-ubuntu:                  automatically loaded if this flag is not specified.[0m[0m
+E, [2017-12-13T12:32:30.089035 #69104] ERROR -- aws-demo-baseline-ubuntu: Converge failed on instance <aws-demo-baseline-ubuntu>.
+E, [2017-12-13T12:32:30.089260 #69104] ERROR -- aws-demo-baseline-ubuntu: ------Exception-------
+E, [2017-12-13T12:32:30.089304 #69104] ERROR -- aws-demo-baseline-ubuntu: Class: Kitchen::ActionFailed
+E, [2017-12-13T12:32:30.089335 #69104] ERROR -- aws-demo-baseline-ubuntu: Message: Running command resulted in failure: Expected process to exit with [0], but received '1'
+---- Begin output of terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening ----
+STDOUT: 
+STDERR: [31minvalid value "/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars" for flag -var-file: Error parsing /Users/yarick/Downloads/aws-demo-hardening/testing.tfvars: At 9:1: literal not terminated[0m[0m
+[31mUsage: terraform validate [options] [dir]
+
+  Validate the terraform files in a directory. Validation includes a
+  basic check of syntax as well as checking that all variables declared
+  in the configuration are specified in one of the possible ways:
+
+      -var foo=...
+      -var-file=foo.vars
+      TF_VAR_foo environment variable
+      terraform.tfvars
+      default value
+
+  If dir is not specified, then the current directory will be used.
+
+Options:
+
+  -check-variables=true If set to true (default), the command will check
+                        whether all required variables have been specified.
+
+  -no-color             If specified, output won't contain any color.
+
+  -var 'foo=bar'        Set a variable in the Terraform configuration. This
+                        flag can be set multiple times.
+
+  -var-file=foo         Set variables in the Terraform configuration from
+                        a file. If "terraform.tfvars" is present, it will be
+                        automatically loaded if this flag is not specified.[0m[0m
+---- End output of terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening ----
+Ran terraform validate -check-variables=true   -var-file=/Users/yarick/Downloads/aws-demo-hardening/testing.tfvars /Users/yarick/Downloads/aws-demo-hardening returned 1
+E, [2017-12-13T12:32:30.089370 #69104] ERROR -- aws-demo-baseline-ubuntu: ----------------------
+E, [2017-12-13T12:32:30.089398 #69104] ERROR -- aws-demo-baseline-ubuntu: ------Backtrace-------
+E, [2017-12-13T12:32:30.089423 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:100:in `block in call'
+E, [2017-12-13T12:32:30.089451 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/dry-monads-0.4.0/lib/dry/monads/result.rb:159:in `or'
+E, [2017-12-13T12:32:30.089486 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/kitchen-terraform-3.0.0/lib/kitchen/provisioner/terraform.rb:99:in `call'
+E, [2017-12-13T12:32:30.089513 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:384:in `block in converge_action'
+E, [2017-12-13T12:32:30.089540 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2017-12-13T12:32:30.089568 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-12-13T12:32:30.089595 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/Cellar/ruby/2.4.2_1/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-12-13T12:32:30.089622 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-12-13T12:32:30.089649 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:380:in `converge_action'
+E, [2017-12-13T12:32:30.089676 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-12-13T12:32:30.089726 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-12-13T12:32:30.089760 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-12-13T12:32:30.089789 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2017-12-13T12:32:30.089816 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-12-13T12:32:30.089842 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-12-13T12:32:30.089869 #69104] ERROR -- aws-demo-baseline-ubuntu: /usr/local/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-12-13T12:32:30.089895 #69104] ERROR -- aws-demo-baseline-ubuntu: ----End Backtrace-----

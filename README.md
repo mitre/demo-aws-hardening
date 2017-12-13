@@ -38,7 +38,7 @@ or
 This repo contains a sub-module(s) so rememeber to use a : 
 
 Initial 
-- ` git pull --recurse-submodules`
+- ` git clone https://github.com/aaronlippold/aws-demo-hardening.git --recurse-submodules`
 
 
 Updates

@@ -35,6 +35,9 @@ or
 
 ## Updates:
 
-This repo contains a sub-module(s) so rememeber to use a :  
+This repo contains a sub-module(s) so rememeber to use a : 
+Initial 
+- ` git pull --recurse-submodules`
+Updates
 - ` git pull --recurse-submodules`
 - ` git fetch --all --prune --recurse-submodules`

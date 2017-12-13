@@ -1,6 +1,9 @@
+# encoding: utf-8
 
-source 'https://rubygems.org/' do
-  gem 'test-kitchen'
-  gem 'kitchen-terraform'
-  gem "awspec"
-end
+source 'https://rubygems.org'
+
+gem 'test-kitchen'
+gem 'inspec'
+gem 'kitchen-inspec'
+gem 'kitchen-terraform'
+gem "awspec"

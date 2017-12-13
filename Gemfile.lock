@@ -717,9 +717,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awspec!
-  kitchen-terraform!
-  test-kitchen!
+  awspec
+  inspec
+  kitchen-inspec
+  kitchen-terraform
+  test-kitchen
 
 BUNDLED WITH
    1.16.0

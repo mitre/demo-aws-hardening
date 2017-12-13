@@ -1,7 +1,15 @@
 # aws-demo-hardening
 A kitchen-terraform based example of building and validating AWS security settings
 
-## Note:
+## Setup Notes:
+
+### Install your gems
+
+You will need to ensure the needed ruby gems are installed:
+
+- `bundle install` to installed the needed gems
+
+### Setup your Environment
 
 You will need to set the following env_vars for this to work.
 
@@ -18,7 +26,7 @@ You will need to set the following env_vars for this to work.
 
 or 
 
-`bundle exec kitchen test aws-demo-baseline-ubuntu --destroy=always`
+1. `bundle exec kitchen test aws-demo-baseline-ubuntu --destroy=always`
 
 ## Quetions:
 

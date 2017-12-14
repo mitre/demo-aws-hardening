@@ -1,19 +1,19 @@
 
 provider "aws" {
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
-  region = "us-east-1"
+  access_key = "${var.aws_access_key}"
+  secret_key = "${var.aws_secret_key}"
+  region = "${var.aws_region}"
 }
 
 resource "aws_instance" "example" {
-  ami = "${var.ami}"
-  subnet_id = "${var.subnet_id}"
-  instance_type = "${var.instance_type}"
-  key_name = "${var.key_name}"
-  vpc_security_group_ids = ["sg-646b1b11"]
+  ami = "${var.aws_ami_id}"
+  subnet_id = "${var.aws_subnet_id}"
+  instance_type = "${var.aws_instance_type}"
+  key_name = "${var.aws_ssh_key_name}"
+  vpc_security_group_ids = ["${var.aws_security_group}"]
 }
 
-resource "aws_s3_bucket" "aws_demo_bucket" {
+resource "aws_s3_bucket" "${var.aws_bucket_prefix}-aws_demo_bucket" {
   bucket = "aws_demo_bucket_1"
   acl    = "public-read"
 
@@ -23,3 +23,4 @@ resource "aws_s3_bucket" "aws_demo_bucket" {
   }
 }
 
+# add s3 bucket elements - pub and private 

@@ -6,4 +6,4 @@ gem 'test-kitchen'
 gem 'inspec'
 gem 'kitchen-inspec'
 gem 'kitchen-terraform'
-gem "awspec"
+gem 'awspec'

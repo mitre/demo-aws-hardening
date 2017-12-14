@@ -1,4 +1,0 @@
-I, [2017-12-11T17:29:09.931308 #17396]  INFO -- default-ubuntu: -----> Verifying <default-ubuntu>...
-I, [2017-12-11T17:29:09.931874 #17396]  INFO -- default-ubuntu: Verifying host 'ec2-34-205-78-64.compute-1.amazonaws.com' of group 'aws-inspec-demo'
-I, [2017-12-11T17:29:11.588526 #17396]  INFO -- default-ubuntu: Loaded default 
-I, [2017-12-11T17:29:11.691120 #17396]  INFO -- default-ubuntu: Finished verifying <default-ubuntu> (0m1.76s).

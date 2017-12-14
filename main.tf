@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "aws_demo_bucket" {
 
 resource "aws_s3_bucket_object" "object" {
   bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
-  acl = public
+  acl    = "public"
   key    = "public-pic.jpg"
   source = "./data/public-pic.jpg"
   etag   = "${md5(file("./data/public-pic.jpg"))}"
@@ -37,7 +37,7 @@ resource "aws_s3_bucket_object" "object" {
 
 resource "aws_s3_bucket_object" "object" {
   bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
-  acl = private
+  acl = "private"
   key    = "private-pic.jpg"
   source = "./data/private-pic.jpg"
   etag   = "${md5(file("./data/private-pic.jpg"))}"

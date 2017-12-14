@@ -2,7 +2,6 @@
 driver:
   name: terraform
   variables:
-    aws_subnet_id: "<%= ENV['AWS_SUBNET_ID'] %>"
     aws_ssh_key_name: "<%= ENV['AWS_SSH_KEY_ID'] %>"
     aws_access_key: "<%= ENV['AWS_ACCESS_KEY_ID'] %>"
     aws_secret_key: "<%= ENV['AWS_SECRET_ACCESS_KEY'] %>"

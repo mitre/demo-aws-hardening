@@ -23,19 +23,6 @@ resource "aws_s3_bucket" "aws_demo_bucket" {
   }
 }
 
-# working version
-#resource "aws_s3_bucket" "aws_demo_bucket" {
-#  bucket = "aws_demo_bucket_1"
-#  acl    = "public-read"
-#
-#  tags {
-#    Name        = "aws_demo_bucket"
-#    Environment = "prod"
-#  }
-#}
-
-
-
 # add s3 bucket elements - pub
 
 resource "aws_s3_bucket_object" "object" {
@@ -43,7 +30,7 @@ resource "aws_s3_bucket_object" "object" {
   acl = public
   key    = "public-pic.jpg"
   source = "./data/public-pic.jpg"
-  etag   = "${md5(file("path/to/file"))}"
+  etag   = "${md5(file("./data/public-pic.jpg"))}"
 }
 
 # add s3 bucket elements - pri
@@ -53,5 +40,5 @@ resource "aws_s3_bucket_object" "object" {
   acl = private
   key    = "private-pic.jpg"
   source = "./data/private-pic.jpg"
-  etag   = "${md5(file("path/to/file"))}"
+  etag   = "${md5(file("./data/private-pic.jpg"))}"
 }

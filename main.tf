@@ -14,11 +14,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "aws_demo_bucket" {
-<<<<<<< HEAD
-  bucket = "aws_demo_bucket_1"
-=======
   bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
->>>>>>> 3c4eaeabb9be72ecd9380c75be801928bcf73e5b
   acl    = "public-read"
 
   tags {

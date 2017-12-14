@@ -14,7 +14,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "${var.aws_ssh_key_name}-aws_demo_bucket" {
-  bucket = "aws_demo_bucket_1"
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket_1"
   acl    = "public-read"
 
   tags {
@@ -24,5 +24,13 @@ resource "aws_s3_bucket" "${var.aws_ssh_key_name}-aws_demo_bucket" {
 }
 
 # add s3 bucket elements - pub
+
+resource "aws_s3_bucket_object" "object" {
+  bucket = "your_bucket_name"
+  key    = "new_object_key"
+  source = "path/to/file"
+  etag   = "${md5(file("path/to/file"))}"
+}
+
 # another test
 # add s3 bucket elements - pri

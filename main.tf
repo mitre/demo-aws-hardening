@@ -23,4 +23,5 @@ resource "aws_s3_bucket" "${var.aws_bucket_prefix}-aws_demo_bucket" {
   }
 }
 
-# add s3 bucket elements - pub and private 
+# add s3 bucket elements - pub
+# add s3 bucket elements - pri

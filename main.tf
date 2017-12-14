@@ -13,8 +13,8 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = ["${var.aws_security_group}"]
 }
 
-resource "aws_s3_bucket" "${var.aws_ssh_key_name}-aws_demo_bucket" {
-  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket_1"
+resource "aws_s3_bucket" "aws_demo_bucket" {
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
   acl    = "public-read"
 
   tags {
@@ -26,11 +26,19 @@ resource "aws_s3_bucket" "${var.aws_ssh_key_name}-aws_demo_bucket" {
 # add s3 bucket elements - pub
 
 resource "aws_s3_bucket_object" "object" {
-  bucket = "your_bucket_name"
-  key    = "new_object_key"
-  source = "path/to/file"
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  acl = public
+  key    = "public-pic.jpg"
+  source = "./data/public-pic.jpg"
   etag   = "${md5(file("path/to/file"))}"
 }
 
-# another test
 # add s3 bucket elements - pri
+
+resource "aws_s3_bucket_object" "object" {
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  acl = private
+  key    = "private-pic.jpg"
+  source = "./data/private-pic.jpg"
+  etag   = "${md5(file("path/to/file"))}"
+}

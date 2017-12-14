@@ -1,7 +1,3 @@
-variable aws_subnet_id {
- 	default = ""
- }
-
 variable aws_ssh_key_name {
  	default = ""
  }
@@ -30,7 +26,7 @@ variable aws_region {
  	default = ""
  }
 
-variable aws_ami_id { 
+variable aws_ami_id {
  	default = ""
  }
 

@@ -13,7 +13,7 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = ["${var.aws_security_group}"]
 }
 
-resource "aws_s3_bucket" "${var.aws_bucket_prefix}-aws_demo_bucket" {
+resource "aws_s3_bucket" "${var.aws_ssh_key_name}-aws_demo_bucket" {
   bucket = "aws_demo_bucket_1"
   acl    = "public-read"
 

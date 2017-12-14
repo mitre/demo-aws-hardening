@@ -14,6 +14,7 @@ You will need to ensure the needed ruby gems are installed:
 
 You will need to set the following env_vars for this to work.
 
+<<<<<<< HEAD
 - AWS_SUBNET_ID
 - AWS_SSH_KEY_ID
 - AWS_ACCESS_KEY_ID
@@ -24,6 +25,23 @@ You will need to set the following env_vars for this to work.
 - AWS_DEFAULT_REGION
 - AWS_AMI_ID
 - AWS_SG_ID
+=======
+#####AWS
+- `AWS_...=<your...>`  
+- `AWS_... `
+- ...
+>>>>>>> 6f4a2f3e5911befd762ee56a0bad45782a932e4d
+
+#####Terraform
+- `TF_VAR...=<your...>`  
+- `TF_VAR_${var}... `
+- `TF_VAR_subnet_id = sub-nnn`
+
+where ${var} is a variable name from terraform variable file.
+
+Alternatively, variables are defined here
+- `variables.tf    `    (default values)
+- `testing.tfvars  `  (your values)
 
 ## Usage:
 
@@ -43,7 +61,11 @@ or
 
 ## Updates:
 
+<<<<<<< HEAD
 This repo contains a sub-module(s) so remember to use a :
+=======
+This repo contains a sub-module(s) so rememeber to use a :
+>>>>>>> 6f4a2f3e5911befd762ee56a0bad45782a932e4d
 
 Initial
 - ` git clone https://github.com/aaronlippold/aws-demo-hardening.git --recurse-submodules`

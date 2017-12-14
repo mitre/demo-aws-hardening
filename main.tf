@@ -14,7 +14,11 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "aws_demo_bucket" {
+<<<<<<< HEAD
   bucket = "aws_demo_bucket_1"
+=======
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+>>>>>>> 3c4eaeabb9be72ecd9380c75be801928bcf73e5b
   acl    = "public-read"
 
   tags {
@@ -37,5 +41,21 @@ resource "aws_s3_bucket" "aws_demo_bucket" {
 
 
 # add s3 bucket elements - pub
-# another test
+
+resource "aws_s3_bucket_object" "object" {
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  acl = public
+  key    = "public-pic.jpg"
+  source = "./data/public-pic.jpg"
+  etag   = "${md5(file("path/to/file"))}"
+}
+
 # add s3 bucket elements - pri
+
+resource "aws_s3_bucket_object" "object" {
+  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  acl = private
+  key    = "private-pic.jpg"
+  source = "./data/private-pic.jpg"
+  etag   = "${md5(file("path/to/file"))}"
+}

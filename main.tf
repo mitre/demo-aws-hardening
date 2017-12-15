@@ -14,7 +14,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "aws_demo_bucket" {
-  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  bucket = "${var.aws_ssh_key_name}-aws_demo_s3_bucket"
   acl    = "public-read"
   force_destroy = true
 
@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "aws_demo_bucket" {
 # add s3 bucket elements - pub
 
 resource "aws_s3_bucket_object" "public-read" {
-  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  bucket = "${var.aws_ssh_key_name}-aws_demo_s3_bucket"
   acl    = "public-read"
   key    = "public-pic-read.jpg"
   source = "./data/public-pic.jpg"
@@ -39,7 +39,7 @@ resource "aws_s3_bucket_object" "public-read" {
 # add s3 bucket elements - pub Authenticated Users only
 
 resource "aws_s3_bucket_object" "authenticated-read" {
-  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  bucket = "${var.aws_ssh_key_name}-aws_demo_s3_bucket"
   acl    = "authenticated-read"
   key    = "public-pic-authenticated.jpg"
   source = "./data/public-pic.jpg"
@@ -50,7 +50,7 @@ resource "aws_s3_bucket_object" "authenticated-read" {
 # add s3 bucket elements - pri
 
 resource "aws_s3_bucket_object" "private" {
-  bucket = "${var.aws_ssh_key_name}-aws_demo_bucket"
+  bucket = "${var.aws_ssh_key_name}-aws_demo_s3_bucket"
   acl = "private"
   key    = "private-pic.jpg"
   source = "./data/private-pic.jpg"

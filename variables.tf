@@ -33,3 +33,7 @@ variable aws_ami_id {
 variable aws_security_group {
  	default = ""
  }
+
+variable s3_name {
+	default = ""
+}

@@ -1,6 +1,3 @@
-resource "random_id" "bucket_id" {
-  byte_length = 8
-}
 
 provider "aws" {
   version = "=1.1"

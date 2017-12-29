@@ -24,8 +24,6 @@ transport:
 
 verifier:
   name: terraform
-  #format: json
-  #output: "%{platform}_%{suite}-<%= Time.now.iso8601 %>.json"
   groups:
     - name: aws-demo-baseline
 

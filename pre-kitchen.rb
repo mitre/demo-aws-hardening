@@ -18,4 +18,4 @@ end
 puts ''
 puts '----------'
 puts 'You are OK to run Test Kitchen' if @run_kitchen == true
-puts 'Please SET the above Envrioment variables before running kitchen'
+puts 'Please SET the above Envrioment variables before running kitchen' if @run_kitchen == false

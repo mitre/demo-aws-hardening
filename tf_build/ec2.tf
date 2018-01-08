@@ -23,17 +23,12 @@ data "aws_vpc" "default" {
   default = "true"
 }
 
-data "aws_security_group" "default" {
+resource "aws_default_security_group" "default_" {
   vpc_id = "${data.aws_vpc.default.id}"
-  name = "default"
 }
 
 output "ec2_security_group_default_vpc_id" {
   value = "${data.aws_vpc.default.id}"
-}
-
-output "ec2_security_group_default_group_id" {
-  value = "${data.aws_security_group.default.id}"
 }
 
 # Create ingress rules for specified security group

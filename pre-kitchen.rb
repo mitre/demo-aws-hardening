@@ -35,8 +35,8 @@ re = Regexp.union('false')
 if my_vpcs['Vpcs'][0]['IsDefault'].to_s.match(re)
 	puts 'Default VPC does NOT exist'
 	puts '  - please use an account/region with default VPC'
-	puts '  - alternativelly,  consider hard-coding default vpc with terraform'
-	puts '		set aws_default_vpc=' + my_vpcs['Vpcs'][0]['VpcId']
+	puts '  - alternativelly,  consider hard-coding default vpc with terraform by setting Environment Variable to your VPC (below)'
+	puts '		export TF_VAR_vpc_id=' + my_vpcs['Vpcs'][0]['VpcId']
 else
 	puts 'Default VPC Exists'
 end

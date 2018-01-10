@@ -2,25 +2,34 @@
 require 'yaml'
 
 @run_kitchen = true
-file_content = YAML.load_file(".kitchen.yml")
-my_vars = file_content['driver']['variables']
+my_vars =
+  [
+    'AWS_SSH_KEY_ID',
+    'AWS_ACCESS_KEY_ID',
+    'AWS_SECRET_ACCESS_KEY',
+    'AWS_DEFAULT_INSTANCE_TYPE',
+    'AWS_SUBNET_ID',
+    'AWS_REGION',
+    'AWS_AMI_ID',
+    'AWS_SG_ID',
+  ]
 
-my_vars.each_pair do |key, value|
-  x = ENV.key?(value.split("'")[1]) ? "#{ENV[value.split("'")[1]]}" : 'unset'
-  if x == 'unset'
-    @run_kitchen = false
-    puts "Please set #{value.split("'")[1]}"
+my_vars.each do |value|
+  if ENV.fetch(value,nil).to_s != ''
+    puts "#{value} is:" + ENV.fetch(value,nil).to_s
   else
-    puts key.to_s + ': ' + x.to_s
+    puts "Please set #{value}"
   end
 end
+
+puts "If you want to get JSON output, please set the USE_JSON = 'true'"
 
 puts ''
 puts '----------'
 puts 'You are OK to run Test Kitchen' if @run_kitchen == true
 puts 'Please SET the above Envrioment variables before running kitchen' if @run_kitchen == false
 
-require 'rubygems'; require 'json'; 
+require 'rubygems'; require 'json';
 # puts  %x[aws ec2 describe-vpcs]
 
 # puts JSON.pretty_generate(JSON[STDIN.read]);"
@@ -34,9 +43,11 @@ my_vpcs =  JSON.parse(%x[aws ec2 describe-vpcs]);
 re = Regexp.union('false')
 if my_vpcs['Vpcs'][0]['IsDefault'].to_s.match(re)
 	puts 'Default VPC does NOT exist'
+        puts ' --- '
+        #puts " please update the 'tf_build/variables.tf' file and set the 'default_vpc' to 'false' "
 	puts '  - please use an account/region with default VPC'
 	puts '  - alternativelly,  consider hard-coding default vpc with terraform by setting Environment Variable to your VPC (below)'
-	puts '		export TF_VAR_vpc_id=' + my_vpcs['Vpcs'][0]['VpcId']
+	puts '  export TF_VAR_vpc_id=' + my_vpcs['Vpcs'][0]['VpcId']
 else
 	puts 'Default VPC Exists'
 end

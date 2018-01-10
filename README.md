@@ -50,8 +50,7 @@ Initial
 
 
 Updates
-- ` git pull --recurse-submodules`
-- ` git fetch --all --prune --recurse-submodules`
+- ` git pull`
 
 ## Useful Examples:
 - https://github.com/hashicorp/terraform-aws-vault/pull/26/files

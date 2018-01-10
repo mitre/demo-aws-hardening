@@ -1,5 +1,5 @@
 <%
-  use_json = <%= ENV['USE_JSON'] %>
+  use_json = "<%= ENV['USE_JSON'] %>"
 %>
 ---
 driver:

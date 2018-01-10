@@ -1,3 +1,6 @@
+<%
+  use_json = ENV['USE_JSON']
+%>
 ---
 driver:
   name: terraform
@@ -25,6 +28,10 @@ transport:
 
 verifier:
   name: terraform
+  <% if ENV['USE_JSON'] == 'true' %>
+  format: json
+  output: "%{suite}-<%= Time.now.iso8601 %>.json"
+  <% end %>
   groups:
     - name: aws-demo-baseline
 

@@ -15,6 +15,7 @@
 /*.DS_STORE
 #  Local .terraform directories
 **/.terraform/*
+Gemfile.lock
 
 # .tfstate files
 *.tfstate

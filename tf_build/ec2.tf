@@ -19,8 +19,14 @@ resource "aws_instance" "example" {
 #============================================================#
 
 # Look up the default VPC and the default security group for it
+
+#data "aws_vpc" "default" {
+#  default = "true"
+#}
+
 data "aws_vpc" "default" {
-  default = "true"
+  default = "${var.vpc_id == "" ? true : false}"
+  id = "${var.vpc_id}"
 }
 
 resource "aws_default_security_group" "default" {

@@ -1,5 +1,5 @@
 <%
-  use_json = "<%= ENV['USE_JSON'] %>"
+  use_json = ENV['USE_JSON']
 %>
 ---
 driver:
@@ -28,7 +28,7 @@ transport:
 
 verifier:
   name: terraform
-  <% if use_json == true %>
+  <% if ENV['USE_JSON'] == 'true' %>
   format: json
   output: "%{suite}-<%= Time.now.iso8601 %>.json"
   <% end %>

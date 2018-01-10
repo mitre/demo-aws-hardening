@@ -46,7 +46,7 @@ or
 This repo contains a sub-module(s) so remember to use a :
 
 Initial
-- ` git clone https://github.com/aaronlippold/aws-demo-hardening.git --recurse-submodules`
+- ` git clone https://github.com/aaronlippold/aws-demo-hardening.git`
 
 
 Updates

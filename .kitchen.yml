@@ -7,7 +7,7 @@ driver:
   variables:
     aws_ssh_key_name: "<%= ENV['AWS_SSH_KEY_ID'] %>"
     aws_access_key: "<%= ENV['AWS_ACCESS_KEY_ID'] %>"
-    aws_secret_key: "<%= ENV['AWS_SECRET_ACCESS_KEY'] %>"
+    #aws_secret_key: "<%= ENV['AWS_SECRET_ACCESS_KEY'] %>"
     aws_instance_type: "<%= ENV['AWS_DEFAULT_INSTANCE_TYPE'] %>"
     aws_subnet_id: "<%= ENV['AWS_SUBNET_ID'] %>"
     aws_region: "<%= ENV['AWS_REGION'] %>"

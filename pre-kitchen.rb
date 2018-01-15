@@ -6,7 +6,7 @@ my_vars =
   [
     'AWS_SSH_KEY_ID',
     'AWS_ACCESS_KEY_ID',
-    'AWS_SECRET_ACCESS_KEY',
+    'TF_VAR_aws_secret_key',
     'AWS_DEFAULT_INSTANCE_TYPE',
     'AWS_SUBNET_ID',
     'AWS_REGION',

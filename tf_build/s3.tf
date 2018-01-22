@@ -14,7 +14,8 @@ resource "aws_s3_bucket" "aws_demo_public_bucket" {
 }
 
 resource "aws_s3_bucket" "aws_demo_private_bucket" {
-  bucket        = "aws-demo-s3-private-bucket-${random_id.bucket_id.hex}"
+  #bucket        = "aws-demo-s3-private-bucket-${random_id.bucket_id.hex}"
+  bucket        = "s3-private-bucket"
   acl           = "private"
   force_destroy = true
   region        = "us-east-1"

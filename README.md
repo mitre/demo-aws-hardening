@@ -17,6 +17,7 @@ You will need to set the following env_vars for this to work.
 - AWS_SUBNET_ID
 - AWS_SSH_KEY_ID
 - AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
 - TF_VAR_aws_secret_key
 - AWS_DEFAULT_INSTANCE_TYPE
 - AWS_SUBNET_ID
@@ -25,7 +26,6 @@ You will need to set the following env_vars for this to work.
 - AWS_AMI_ID
 - AWS_SG_ID
 
-	removed AWS_SECRET_ACCESS_KEY in lueue of TF_VAR_aws_secret_key
 ## Usage:
 
 1. `bundle exec kitchen create aws-demo-baseline-ubuntu`

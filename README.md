@@ -48,7 +48,8 @@ This repo contains a sub-module(s) so remember to use a :
 
 Initial
 - ` git clone https://github.com/aaronlippold/aws-demo-hardening.git`
-
+Alternativelly,  to include submodules
+- ` git clone https://github.com/aaronlippold/aws-demo-hardening.git --recursive`
 
 Updates
 - ` git pull`

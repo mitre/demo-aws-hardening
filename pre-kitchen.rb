@@ -4,8 +4,6 @@ require 'yaml'
 @run_kitchen = true
 my_vars =
   [
-    'AWS_SSH_KEY_ID',
-    'AWS_ACCESS_KEY_ID',
     'TF_VAR_aws_secret_key',
     'AWS_DEFAULT_INSTANCE_TYPE',
     'AWS_SUBNET_ID',
@@ -18,6 +16,7 @@ my_vars.each do |value|
   if ENV.fetch(value,nil).to_s != ''
     puts "#{value} is:" + ENV.fetch(value,nil).to_s
   else
+    @run_kitchen=false
     puts "Please set #{value}"
   end
 end

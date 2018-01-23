@@ -4,6 +4,8 @@ require 'yaml'
 @run_kitchen = true
 my_vars =
   [
+    'AWS_ACCESS_KEY_ID',
+    'AWS_SECRET_ACCESS_KEY',
     'TF_VAR_aws_secret_key',
     'AWS_DEFAULT_INSTANCE_TYPE',
     'AWS_SUBNET_ID',

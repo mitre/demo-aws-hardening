@@ -54,6 +54,8 @@ Alternatively,  to include submodules
 
 Updates
 - ` git pull`
+Update all submodules
+- ` git submodule foreach git pull origin master`
 
 ## Useful Examples:
 - https://github.com/hashicorp/terraform-aws-vault/pull/26/files

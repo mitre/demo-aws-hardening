@@ -53,7 +53,7 @@ else
 	puts 'Default VPC Exists'
 end
 
-#   puts '-----'
+#  puts '-----'
 #  my_vpc = my_vpcs['Vpcs']
 #  puts '+++'
 #  puts my_vpc[0]
